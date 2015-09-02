@@ -23,7 +23,7 @@ public class EveClientHelper {
 	//	CloseableHttpClient httpclient = HttpClients.createDefault();
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "application-context.xml");
-		String keyAuth = "keyID=3187579&vCode=nszMsNW0JcPRK2U9c5NCss6g4UBWfukJdbgCYsNolIxgX23IOuywBaigfOjI2q4j";
+		String keyAuth = hh;
 		//EveApiHelper helper = new EveApiHelper();
 		
 		//helper.getCharacterBluePrints(keyAuth);
