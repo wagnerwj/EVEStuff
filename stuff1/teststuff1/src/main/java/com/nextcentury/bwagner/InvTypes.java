@@ -1,15 +1,20 @@
 package com.nextcentury.bwagner;
 
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 
 @Entity
-public class InventoryTypes {
+public class InvTypes {
 //
 	  
 	  @Id
+	  @Column(name = "typeID")
 	  private long typeID;
 	  
 	  private long groupID;
@@ -18,23 +23,22 @@ public class InventoryTypes {
 	  
 	  private String description;
 	  
-	  private double mass;
+	  private Double mass;
 	  
-	  private double volume;
+	  private Double volume;
 	  
-	  private double capacity;
+	  private Double capacity;
 	  
-	  private long portionSize;
+	  private Long portionSize;
 	  
-	  private int raceID;
+	  private Short raceID;
 	  
-	  private double basePrice;
+	  private BigDecimal basePrice;
 	  
-	  private boolean published;
+	  private Boolean published;
 	  
-	  private long marketGroupID;
+	  private Long marketGroupID;
 	  
-	  private double chanceOfDuplicating;
 
 	public long getTypeID() {
 		return typeID;
@@ -100,19 +104,19 @@ public class InventoryTypes {
 		this.portionSize = portionSize;
 	}
 
-	public int getRaceID() {
+	public Short getRaceID() {
 		return raceID;
 	}
 
-	public void setRaceID(int raceID) {
+	public void setRaceID(Short raceID) {
 		this.raceID = raceID;
 	}
 
-	public double getBasePrice() {
+	public BigDecimal getBasePrice() {
 		return basePrice;
 	}
 
-	public void setBasePrice(double basePrice) {
+	public void setBasePrice(BigDecimal basePrice) {
 		this.basePrice = basePrice;
 	}
 
@@ -124,19 +128,12 @@ public class InventoryTypes {
 		this.published = published;
 	}
 
-	public long getMarketGroupID() {
+	public Long getMarketGroupID() {
 		return marketGroupID;
 	}
 
-	public void setMarketGroupID(long marketGroupID) {
+	public void setMarketGroupID(Long marketGroupID) {
 		this.marketGroupID = marketGroupID;
 	}
 
-	public double getChanceOfDuplicating() {
-		return chanceOfDuplicating;
-	}
-
-	public void setChanceOfDuplicating(double chanceOfDuplicating) {
-		this.chanceOfDuplicating = chanceOfDuplicating;
-	}
 }
